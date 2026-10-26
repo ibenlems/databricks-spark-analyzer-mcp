@@ -27,8 +27,6 @@ This project is built as an MCP server first. It can be connected to any MCP-com
 - [Development and tests](#development-and-tests)
 - [Contributing](#contributing)
 - [License](#license)
-- [Publish to GitHub](#publish-to-github)
-- [Summary](#summary)
 
 ## What this project gives you
 
@@ -261,18 +259,3 @@ Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for local setu
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Publish to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin git@github.com:<your-user>/databricks-spark-analyzer-mcp.git
-git push -u origin main
-```
-
-## Summary
-
-This repository is an MCP-first Databricks Spark analyzer that can be plugged into any coding agent. OpenCode is only one of many possible clients and is included as a working reference example, not as the main requirement.
