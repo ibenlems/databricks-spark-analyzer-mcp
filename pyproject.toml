@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "databricks-spark-analyzer-mcp"
+version = "0.1.0"
+description = "MCP server for Databricks job history, Spark plan analysis, and performance triage"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "databricks-sdk>=0.38.0",
+    "pydantic>=2.7.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+databricks-spark-analyzer-mcp = "databricks_mcp_server.server:main"
+databricks-mcp = "databricks_mcp_server.server:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
