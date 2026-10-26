@@ -1,12 +1,34 @@
 # Databricks Spark Analyzer MCP
 
-[![CI](https://github.com/<your-user>/databricks-spark-analyzer-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-user>/databricks-spark-analyzer-mcp/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?logo=apachespark&logoColor=white)](https://spark.apache.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A lightweight MCP server for Databricks that helps coding agents inspect Spark job runs, query plans, stage behavior, and cluster bottlenecks using real execution evidence.
 
-This project is built as an MCP server first. It can be connected to any MCP-compatible coding agent, IDE, or local workflow. OpenCode is just one example of how to use it.
+A lightweight MCP server for Databricks that helps coding agents inspect Databricks Spark job runs, query plans, stage behavior, and cluster bottlenecks using real execution evidence.
+
+This project is built as an MCP server first. It can be connected to any MCP-compatible coding agent, IDE, or local workflow. An example integration with [OpenCode](https://opencode.ai/) is provided below.
+
+## Table of contents
+
+- [What this project gives you](#what-this-project-gives-you)
+- [Why integrate it](#why-integrate-it)
+- [Quick start](#quick-start)
+  - [1) Install](#1-install)
+  - [2) Configure environment](#2-configure-environment)
+  - [3) Run the server](#3-run-the-server)
+- [MCP integration: use it with any coding agent](#mcp-integration-use-it-with-any-coding-agent)
+- [OpenCode example (reference only)](#opencode-example-reference-only)
+- [Tools exposed by the server](#tools-exposed-by-the-server)
+- [Example prompt for an integrated agent](#example-prompt-for-an-integrated-agent)
+- [Example result format](#example-result-format)
+- [What patterns are available](#what-patterns-are-available)
+- [Custom patterns and thresholds](#custom-patterns-and-thresholds)
+- [Development and tests](#development-and-tests)
+- [Contributing](#contributing)
+- [License](#license)
+- [Publish to GitHub](#publish-to-github)
+- [Summary](#summary)
 
 ## What this project gives you
 
@@ -25,7 +47,7 @@ A Spark job often fails or slows down because the evidence is spread across many
 ### 1) Install
 
 ```bash
-git clone https://github.com/<your-user>/databricks-spark-analyzer-mcp.git
+git clone https://github.com/ibenlems/databricks-spark-analyzer-mcp.git
 cd databricks-spark-analyzer-mcp
 
 python -m venv .venv
